@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Infografía Digital</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <style>
+            .colorOfTheYear {
+                fill: #0F4C81;
+            }
+        </style>
+    </head>
+    <body>
+        <svg x="0px" y="0px" viewBox="0 0 100 100" class="d-none d-md-block">
+            <polygon points="10,10 90,10 90,90 10,90" />
+            <text x="50" y="50" text-anchor="middle" fill="white" font-size="4">DESDE MD</text>
+        </svg>
+        <svg x="0px" y="0px" viewBox="0 0 100 200" class="d-md-none">
+            <polygon points="10,10 90,10 90,190 10,190" />
+            <text x="50" y="100" text-anchor="middle" fill="white" font-size="6">HASTA MD</text>
+        </svg>
+        <footer> 
+            <div class="container">
+                <div class="text-center py-5 small"><a href="index.html">index.html</a> &bull; <a href="copia.html">copia.html</a> &bull; <a href="ejercicio.html">ejercicio.html</a></div>
+            </div>
+        </footer> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                var total = $(window).height();
+                if (scroll >= total / 5) {
+                    $("polygon").addClass("colorOfTheYear");
+                } else {
+                    $("polygon").removeClass("colorOfTheYear");
+                }
+            });
+        </script>
+    </body>
+</html>
